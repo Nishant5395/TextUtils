@@ -2,25 +2,25 @@ import React,{useState} from 'react'
 
 export default function TextForm(props) {
     const handleUpClick=()=>{
-        //console.log("UpperCase was clicked: "+text);
+       
         let newText=text.toUpperCase();
         setText(newText)
         props.showAlert("converted to upperCase","success");
     }
     const handleLowClick=()=>{
-        //console.log("UpperCase was clicked: "+text);
+       
         let newText=text.toLowerCase();
         setText(newText)
         props.showAlert("converted to lowerCase","success");
     }
     const handleClearClick=()=>{
-      //console.log("UpperCase was clicked: "+text);
+      
       let newText='';
       setText(newText)
       props.showAlert("text cleared","success");
   }
     const handleOnChange=(event)=>{
-        //console.log("on change");
+       
         setText(event.target.value);
         
     }
@@ -33,8 +33,7 @@ export default function TextForm(props) {
     }
 
     const [text,setText]=useState('Enter text here');
-    //text ="new text"; this is not right way to set the new state
-    //setText("new text"); this is right way to change the state
+    
   return (
     <>
     <div className="container"  style={{color:props.mode==='dark'?'white':'black'}}>
